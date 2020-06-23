@@ -53,6 +53,11 @@ namespace Ink
             return new Parsed.Story (topLevelContent, isInclude:_rootParser != this);
         }
 
+        public Dictionary<int, string> GetAgentDialogs()
+        {
+            return Agent_Dialogs;
+        }
+
         protected List<T> SeparatedList<T> (SpecificParseRule<T> mainRule, ParseRule separatorRule) where T : class
         {
             T firstElement = Parse (mainRule);

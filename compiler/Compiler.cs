@@ -58,6 +58,11 @@ namespace Ink
             return _runtimeStory;
         }
 
+        public Dictionary<int,string> GetAgentDialogs()
+        {
+            return _parser.GetAgentDialogs();
+        }
+
         public class CommandLineInputResult {
             public bool requestsExit;
             public int choiceIdx = -1;
